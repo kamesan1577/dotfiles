@@ -1,0 +1,7 @@
+[user]
+	name = kamesan1577
+	email = kamesan1577@users.noreply.github.com
+[pull]
+	rebase = true
+[includeIf "gitdir:~/path/to/iniad-rep/"]
+   	path = ~/.gitconfig_iniad
