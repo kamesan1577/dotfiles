@@ -152,3 +152,5 @@ export PATH="$HOME/.poetry/bin:$PATH"
 precmd() {
   add_newline
 }
+
+eval $(thefuck --alias)
