@@ -154,3 +154,4 @@ precmd() {
 }
 
 eval $(thefuck --alias)
+source "$HOME/.rye/env"
