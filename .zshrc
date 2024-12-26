@@ -116,7 +116,7 @@ add_newline() {
   fi
 }
 
-echo -e "\e[31m再起動は迂闊にするな\e[m"
+# echo -e "\e[31m再起動は迂闊にするな\e[m"
 
 # 指定したファイルから環境変数を export する
 function set_env() {
@@ -131,27 +131,30 @@ function unset_env() {
 
 set_env ~/.env_list  # 環境変数を設定する
 
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
+# export PATH="$HOME/.rbenv/bin:$PATH"
+# eval "$(rbenv init -)"
 
 # opam configuration
-test -r /home/kamentu/.opam/opam-init/init.sh && . /home/kamentu/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-. "$HOME/.cargo/env"
+# test -r /home/kamentu/.opam/opam-init/init.sh && . /home/kamentu/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
+# . "$HOME/.cargo/env"
 
-export MODULAR_HOME="$HOME/.modular"
-export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
-export PYENV_ROOT="$HOME/.pyenv"
-export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
+# export MODULAR_HOME="$HOME/.modular"
+# export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
+# export NVM_DIR="$HOME/.nvm"
+# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+# export PYENV_ROOT="$HOME/.pyenv"
+# export PATH="$PYENV_ROOT/bin:$PATH"
+# eval "$(pyenv init -)"
 
-export PATH="$HOME/.poetry/bin:$PATH"
+# export PATH="$HOME/.poetry/bin:$PATH"
 
 precmd() {
   add_newline
 }
 
-eval $(thefuck --alias)
-source "$HOME/.rye/env"
+# eval $(thefuck --alias)
+# eval "$(pay-respects zsh --alias)"
+# source "$HOME/.rye/env"
+
+alias sudocode='SUDO_EDITOR="$(which code) --wait" sudoedit'
