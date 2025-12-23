@@ -140,9 +140,9 @@ set_env ~/.env_list  # 環境変数を設定する
 
 # export MODULAR_HOME="$HOME/.modular"
 # export PATH="$MODULAR_HOME/pkg/packages.modular.com_mojo/bin:$PATH"
-# export NVM_DIR="$HOME/.nvm"
-# [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-# [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 # export PYENV_ROOT="$HOME/.pyenv"
 # export PATH="$PYENV_ROOT/bin:$PATH"
 # eval "$(pyenv init -)"
@@ -158,3 +158,14 @@ precmd() {
 # source "$HOME/.rye/env"
 
 alias sudocode='SUDO_EDITOR="$(which code) --wait" sudoedit'
+
+# bun completions
+[ -s "/home/kamesan/.bun/_bun" ] && source "/home/kamesan/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
+. "$HOME/.local/bin/env"
+
+export PATH=$PATH:/usr/local/go/bin

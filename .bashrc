@@ -150,3 +150,5 @@ eval "$(pyenv init -)"
 export PATH="$HOME/.poetry/bin:$PATH"
 
 
+
+. "$HOME/.local/bin/env"
